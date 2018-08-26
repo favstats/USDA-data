@@ -47,7 +47,7 @@ DF_county<- function(CROP, STATE, YEAR){
   
   Single_df<-function(CROP, STATE, YEAR){
     
-    d.frame <- fromJSON(paste(c('http://quickstats.nass.usda.gov/api/api_GET/?key=FC7A1A36-8C41-3852-B6A8-310967C0F8FE&commodity_desc=',CROP,'&year=',YEAR,'&state_alpha=',STATE,'&format=JSON'),collapse=''))
+    d.frame <- fromJSON(paste(c('http://quickstats.nass.usda.gov/api/api_GET/?key=   API KEY   =',CROP,'&year=',YEAR,'&state_alpha=',STATE,'&format=JSON'),collapse=''))
     df<- dplyr::bind_rows(d.frame)
     df<- spread(df, statisticcat_desc, Value)
     
